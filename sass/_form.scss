@@ -1,0 +1,28 @@
+.form-group{
+  margin-bottom:18px;
+}
+.form-control{
+  border-color:#c3c3c3;
+
+}
+input[type=text].form-control,
+input[type=email].form-control,
+input[type=password].form-control{
+  height:48px;
+}
+.form-control-label{
+  margin-bottom:10px;
+  line-height:16px;
+}
+textarea.form-control{
+  resize: none;
+  height: 142px;
+}
+select.form-control{
+  height: 44px!important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background: url(../images/icons/select_chevron_down.png) no-repeat right 15px center #ffffff;
+}

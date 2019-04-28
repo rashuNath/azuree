@@ -1,0 +1,22 @@
+{
+  "name": "azuree",
+  "version": "1.0.0",
+  "description": "an ecommerce template",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "sass --watch sass:content/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rashuNath/azuree.git"
+  },
+  "keywords": [
+    "ecommerce"
+  ],
+  "author": "rashu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rashuNath/azuree/issues"
+  },
+  "homepage": "https://github.com/rashuNath/azuree#readme"
+}
