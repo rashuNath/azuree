@@ -120,6 +120,9 @@
 .margin-top-25{
   margin-top:25px;
 }
+.margin-right-10{
+  margin-right:10px;
+}
 .margin-bottom-25{
   margin-bottom:25px;
 }
@@ -147,6 +150,7 @@
 .for-desktop{
 
 }
+
 
 .position-relative{
   position:relative;
@@ -291,6 +295,9 @@
 .display-none{
   display: none!important;
 }
+.display-block{
+  display: block;
+}
 .display-flex{
   display: flex;
   flex-wrap: wrap;
@@ -309,113 +316,73 @@
   bottom:0;
 }
 a.btn,.btn{
-  font-weight:$light;
-  font-size: 16px;
-  color: #ffffff;
-  background-color:transparent;
-  line-height: 38px;
-  border-radius: 4px;
-  border:1px solid #ffffff;
-  padding:0 20px;
-  transition:background-color 0.3s linear;
   cursor: pointer;
-}
-a.btn:hover, a.btn:focus, a.btn.active,.btn:hover,.btn:focus{
-  background-color:$white-color;
-  color:$secondary-color;
-  transition:background-color 0.3s linear;
-}
-
-.blue-transparent-btn{
-  border-color:$blue!important;
-  color:$blue!important;
-  &:hover,&.active{
-    background-color: $blue!important;
-    color:$white-color!important;
-  }
-}
-
-.dark-blue-transparent-btn{
-  border-color:$dark-blue!important;
-  color:$dark-blue!important;
-  &:hover, &.active{
-    background-color: $dark-blue!important;
-    color:$white-color!important;
-  }
-}
-
-.white-transparent-btn{
-  border-color:$white-color!important;
-  color:$white-color!important;
-  span{
-    font-size: 24px;
-    line-height: 15px;
-    position: relative;
-    top: 3px;
-  }
-  &:hover{
-    span{
-      color:$secondary-color;
-    }
-    background-color: $white-color!important;
-    color:$secondary-color!important;
-  }
-}
-.save-btn{
-  padding:0 35px!important;
-}
-
-a.transparent-btn,.transparent-btn{
-  position: relative;
-  background-color: transparent;
+  font-size:13px;
+  font-weight: $regular;
+  text-transform: uppercase;
+  color:$white-color;
+  background-color: $primary-color;
   border:0;
-  color:$secondary-color;
-  padding:0;
+  border-radius:2px;
+  outline:none;
+  line-height: 1;
+  padding:14px 25px;
+  position: relative;
+  overflow: hidden;
+  span{
+    position: relative;
+    z-index: 9;
+  }
+
 
   &:after{
     content:'';
-    width:100%;
-    height: 1px;
-    background-color: $secondary-color;
     position: absolute;
-    bottom:0;
+    width:100%;
+    height: 0;
     left:0;
-    right:0;
-    opacity:0;
-    transition: $primary-transition;
+    top:0;
+    background-color:$primary-yellow;
+    transition: 0.5s all ease;
+    transform:skew(60deg);
   }
 
-  &:hover{
+  &:hover,&:focus{
+    //background-color: $gold-text-color;
     &:after{
-      transform: translate(0, -5px);
-      opacity:1;
-      transition: $primary-transition;
+      //width:50%;
+      height: 100%;
+    }
+  }
+
+  &.yellow-background{
+    background-color: $primary-yellow;
+
+    &:hover, &:focus{
+      //background-color: $gold-text-color;
+    }
+
+    &:after{
+      background-color: $primary-color;
+    }
+  }
+
+}
+
+.button-holder{
+  .btn{
+    margin-right:10px;
+
+    &:last-child{
+      margin-right: 0;
     }
   }
 }
-
-.btn.blue-background-button, a.btn.blue-background-button{
-  background-color: $blue;
-  border-color:$blue;
-  color:$white-color;
-  line-height: 48px;
-
-  &:hover, &:focus{
-    background-color: rgba(62, 128, 237, 0.73);
-    border-color: rgba(62, 128, 237, 0.73);
-  }
+.color-gold{
+  color:$gold-text-color;
 }
-
-.btn.black-background-btn,a.btn.black-background-btn{
-  background-color: $secondary-color;
-  border-color:$secondary-color;
-  color:$white-color;
-  line-height: 48px;
-
-  &:hover, &:focus{
-    background-color: rgba(32, 32, 32, 0.7);
-    border-color: rgba(32, 32, 32, 0.7);
-  }
+.cursor-pointer{
+  cursor: pointer;
 }
 
 
@@ -795,6 +762,47 @@ form p:last-child {
 //custom radio button
 //custom radio button
 
+
+.pointer{
+  cursor:pointer;
+}
+
+
+.overlayer{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  display: none;
+  z-index: 99;
+  opacity: 0;
+}
+
+.before-none{
+  &:before{
+    display: none;
+  }
+}
+
+.after-none{
+  &:after{
+    display: none;
+  }
+}
+
+.center-v-h{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.font-18-regular{
+  font-size:18px;
+  font-weight: $regular;
+}
+.line-height-1{
+  line-height: 1;
+}
 
 /*responsiveness*/
 @media (max-width:1200px) {

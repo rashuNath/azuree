@@ -1,5 +1,26 @@
 /*screen larger than mobile devices*/
 @media(min-width:1200px){
+  .navbar-brand{
+    padding:0;
+    margin:0;
+  }
+
+  .navbar-nav{
+    margin-right:145px;
+    .nav-item{
+      &:first-child{
+        .nav-link{
+          padding-left:0;
+        }
+      }
+
+      &:last-child{
+        .nav-link{
+          padding-right:0;
+        }
+      }
+    }
+  }
 }
 @media (min-width:992px){
 

@@ -1,0 +1,74 @@
+.dropdown-wrapper{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: -50px;
+    height: 36px;
+    right: 0px;
+    width: 100%;
+  }
+}
+
+
+.custom-dropdown{
+  visibility: hidden;
+  opacity:0;
+  transition: 0.5s all linear;
+
+  position: absolute;
+  top:54px;
+  right:-25px;
+  left:unset;
+  width:300px;
+  padding:15px;
+  background-color:$white-color;
+  border:1px solid #a79359;
+  border-radius:2px;
+  transform:translateY(10px);
+  z-index: 9;
+
+  &:after,
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform:rotate(-90deg);
+  }
+
+  &:after{
+    top: -20px;
+    border-color: transparent transparent transparent #fff;
+    border-width: 10px;
+    right: 36px;
+  }
+  &:before{
+    top: -23px;
+    border-color: transparent transparent transparent #a79359;
+    border-width: 11px;
+    right: 35px;
+  }
+}
+.dropdown-active{
+  visibility: visible;
+  opacity: 1;
+  transform:translateY(0);
+}
+
+.dropdown .dropdown-menu {
+  visibility: hidden;
+  display: block;
+  opacity:0;
+  transform:translateY(10px);
+  transition: 0.5s all linear;
+}
+
+.dropdown.show .dropdown-menu,
+.dropdown:hover .dropdown-menu{ /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+  visibility: visible;
+  opacity: 1;
+  transform:translateY(0);
+}
